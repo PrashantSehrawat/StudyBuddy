@@ -1,0 +1,12 @@
+<div>
+    <h3>RECENT ACTIVITY</h3>
+    {% for m in get_message %}
+     <div>
+      <br>
+      <small>@{{m.user}}         {{m.created_at|timesince}} ago</small>  
+      <p>replied to "{{m.room}}"</p>
+      <p>{{m}}</p>
+    {% endfor %}
+    </div>
+    
+  </div>
